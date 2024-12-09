@@ -1,0 +1,53 @@
+/* Mengatur gaya untuk kontainer tabel */
+.table-container {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 500px;
+}
+
+table {
+    table-layout: auto; /* Membuat tabel menyesuaikan lebar kolom berdasarkan konten */
+    width: 100%; /* Memastikan tabel menggunakan seluruh lebar yang tersedia */
+    font-family: Tahoma; /* Mengubah font tabel menjadi Tahoma */
+    font-size: 14px; /* Menetapkan ukuran font menjadi 10px */
+}
+
+table th, table td {
+    text-align: left; /* Menyelaraskan teks ke kiri */
+    white-space: nowrap; /* Mencegah teks terpotong dan mendorong kolom lebih lebar jika perlu */
+    padding: 0px; /* Memberikan padding agar konten tidak terlalu rapat */
+    height: 1px; /* Mengatur tinggi sel menjadi 10px */
+}
+
+/* Jika Anda ingin menambahkan style khusus pada header tabel */
+table th {
+    font-weight: bold; /* Menebalkan teks di header */
+    background-color: #28a745; /* Menambahkan warna hijau pada header */
+    color: white; /* Mengubah warna teks di header menjadi putih */
+}
+
+/* Gaya untuk baris ganjil dan genap */
+table tr:nth-child(odd) td {
+    background-color: #f9f9f9; /* Warna latar belakang baris ganjil */
+}
+
+table tr:hover td {
+    background-color: #e1e1e1; /* Warna latar belakang saat hover (untuk memperjelas pemilihan baris) */
+}
+
+/* Gaya untuk kolom header yang dipilih */
+table th.sortable:hover {
+    cursor: pointer; /* Menambahkan pointer saat hover di header kolom */
+    background-color: #ddd; /* Warna saat hover */
+}
+
+/* Mengatur gaya untuk sel yang lebih panjang */
+table td {
+    word-wrap: break-word;
+    white-space: nowrap; /* Mencegah pemotongan teks */
+}
+
+/* Menambahkan style panah untuk sorting */
+.sort-icon {
+    margin-left: 5px;
+}

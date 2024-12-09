@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Query Data</title>
+
+    <!-- Link ke file CSS Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 align="center">Form Input Query SQL</h2>
+
+        <!-- Form untuk input query SQL -->
+        <form id="query-form">
+            <div class="form-group">
+                <textarea style="border-width:5px; border-color:black" class="form-control" id="query" name="query" rows="6" placeholder="Contoh: SELECT * FROM mysql.user; SELECT * FROM tabel1 JOIN tabel2 ON tabel1.id = tabel2.id;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Eksekusi Query</button>
+            <button type="button" class="btn btn-secondary" onclick="resetForm()">Reset</button>
+            <h2 align="center" class='mt-4'>Hasil Query</h2>
+            <hr style="border-width:5px; border-color:black;">
+        </form>
+
+        <!-- Tempat untuk menampilkan error dan hasil query -->
+        <div id="errors"></div>
+        <div id="results"></div>
+    </div>
+
+    <!-- Skrip JavaScript dan dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+
+    <!-- Menyertakan file script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
